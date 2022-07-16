@@ -62,7 +62,17 @@ button.react-calendar__navigation__arrow.react-calendar__navigation__next2-butto
   background: transparent;
 }
 
+.react-calendar__viewContainer {
+  margin-top: 30px;
+}
 
+.react-calendar__month-view__days {
+  margin-top: 20px;
+}
+
+button.react-calendar__tile.react-calendar__month-view__days__day {
+  height: 56px;
+}
 
 .App-header {
   background-color: #282c34;
