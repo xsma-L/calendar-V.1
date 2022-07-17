@@ -7,13 +7,21 @@ function App() {
   
   return (
     <div className="App">
-      <h1 className='header'>React Calendar</h1>
+      <h1 className='header'>React Calendar with Range</h1>
       <div className='calendar-container'>
-        <Calendar onChange={setDate} value={date} />
+        <Calendar onChange={setDate} value={date} selectRange={true}/>
       </div>
-      <div className='tex-center'>
-        Selected date: {date.toLocaleDateString()}
-      </div>
+      { date[0] ? (
+        <p>
+          <span>Du :</span>{''} {date[0].toLocaleDateString('fr-FR', {weekday: 'long', year: 'numeric', month:'long', day:'numeric'})}
+          &nbsp; &nbsp;
+          <span>Au :</span> {date[1].toLocaleDateString('fr-FR', {weekday: 'long', year: 'numeric', month:'long', day:'numeric'})}
+        </p> 
+      ) : (
+        <p>
+          <span>Date par défaut :</span>{''} {date.toLocaleDateString('fr-FR', {weekday: 'long', year: 'numeric', month:'long', day:'numeric'})}
+        </p>
+      )}
     </div>
   );
 }
