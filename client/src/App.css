@@ -18,6 +18,20 @@
   margin: auto;
 }
 
+.react-calendar {
+  padding: 25px 20px 50px 20px;
+  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 32%); 
+  border: 1px solid #363636;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.react-calendar__month-view__weekdays {
+  color: #ffffff;
+}
+
 .react-calendar__navigation {
   width: 50%;
   margin: auto;
@@ -34,12 +48,14 @@ button.react-calendar__navigation__arrow.react-calendar__navigation__prev-button
   font-size: 30px;
   border: none;
   background: transparent;
+  color: #ffffff;
 }
 
 button.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
   font-size: 30px;
   border: unset;
   background: transparent;
+  color: #ffffff;
 }
 
 button.react-calendar__navigation__label {
@@ -48,22 +64,32 @@ button.react-calendar__navigation__label {
   border: none;
   width: 30%;
   flex-grow: unset !important;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 button.react-calendar__navigation__arrow.react-calendar__navigation__next-button {
   font-size: 30px;
   border: none;
   background: transparent;
+  color: #ffffff;
 }
 
 button.react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
   font-size: 30px;
   border: unset;
   background: transparent;
+  color: #ffffff;
 }
 
 .react-calendar__viewContainer {
   margin-top: 30px;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .react-calendar__month-view__days {
@@ -72,6 +98,25 @@ button.react-calendar__navigation__arrow.react-calendar__navigation__next2-butto
 
 button.react-calendar__tile.react-calendar__month-view__days__day {
   height: 56px;
+  border: none;
+  background: content-box;
+}
+
+button.react-calendar__tile.react-calendar__month-view__days__day:hover {
+  cursor: pointer;
+  background: #dbd9d9;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day {
+  color: #ffffff;
+  font-weight: bold;
+  background: #bfbfbf;
+  border: 0.5px solid #a39f9f;
+  box-shadow: 3px 3px 6px 1px rgb(141 137 137);
+  -webkit-box-shadow: 3px 3px 6px 1px rgb(141 137 137);
+  -moz-box-shadow: 3px 3px 6px 1px rgb(141 137 137);
 }
 
 .App-header {
